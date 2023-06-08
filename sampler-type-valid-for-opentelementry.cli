@@ -1,0 +1,1 @@
+/subsystem=opentelemetry:write-attribute(name=sampler-type,value=always_on)
