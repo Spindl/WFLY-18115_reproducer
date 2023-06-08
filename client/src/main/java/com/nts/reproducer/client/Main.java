@@ -19,6 +19,6 @@ public class Main {
 
         HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
         String body = response.body();
-        System.out.println("Response was: %s %s".formatted(response.statusCode(), body.isBlank() ? "<No Body>" : body));
+        System.out.println("Response was: %s %s".formatted(response.statusCode(), body.isBlank() ? "<No Body>" : body.substring(0, body.indexOf("\n"))));
     }
 }
